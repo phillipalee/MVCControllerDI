@@ -1,0 +1,2 @@
+Create database [RecordDB]
+go

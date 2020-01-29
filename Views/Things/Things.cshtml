@@ -1,0 +1,20 @@
+﻿@model MVCControllerDI.Models.ThingsModel
+
+@{
+    ViewData["Title"] = "Results";
+}
+
+<h1>Results</h1>
+
+<div>
+    <h4>ThingsModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.response)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.response)
+        </dd>
+    </dl>
+</div>
