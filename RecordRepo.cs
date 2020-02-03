@@ -7,7 +7,7 @@ namespace MVCControllerDI
 {
     public class RecordRepo : IRecordRepo
     {
-        public RecordContext _context = new RecordContext();
+        private RecordContext _context = new RecordContext();
         public IEnumerable<Record> GetRecords()
         {
      

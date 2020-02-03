@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace MVCControllerDI
 {
@@ -15,6 +16,7 @@ namespace MVCControllerDI
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 
@@ -28,6 +30,8 @@ namespace MVCControllerDI
             ///======>              add the class to the service collection
             ///=====================================================================================
             services.AddSingleton<IRecordRepo, RecordRepo>();
+         
+         
             services.Configure<IRecordRepo>(Configuration);
         }
 
@@ -44,6 +48,10 @@ namespace MVCControllerDI
                 // The default HSTS value is 30 days. You may want to change this for pronarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

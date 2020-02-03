@@ -139,4 +139,6 @@ C:\Users\plee2\source\repos\MVCControllerDI\MVCControllerDI\bin\Debug\netcoreapp
 C:\Users\plee2\source\repos\MVCControllerDI\MVCControllerDI\obj\Debug\netcoreapp3.1\Razor\Views\Things\Things.cshtml.g.cs
 C:\Users\plee2\source\repos\MVCControllerDI\MVCControllerDI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\plee2\source\repos\MVCControllerDI\MVCControllerDI\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\plee2\source\repos\MVCControllerDI\MVCControllerDI\bin\Debug\netcoreapp3.1\log4net.config
+C:\Users\plee2\source\repos\MVCControllerDI\MVCControllerDI\bin\Debug\netcoreapp3.1\log4net.dll
 C:\Users\plee2\source\repos\MVCControllerDI\MVCControllerDI\obj\Debug\netcoreapp3.1\MVCControllerDI.MvcApplicationPartsAssemblyInfo.cache

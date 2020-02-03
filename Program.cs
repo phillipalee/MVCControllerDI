@@ -15,21 +15,30 @@ namespace MVCControllerDI
     {
         public static void Main(string[] args)
         {
-            // create the mock data source
-            var mockRecRepo = new Mock<IRecordRepo>();
 
-            // set up the behavior that you want (you could have it return a value(s)
-            mockRecRepo.Setup(x => x.GetRecords())
-                .Returns(Enumerable.Empty<Record>);
+         
+        
+            //// create the mock data source
+            //var mockRecRepo = new Mock<IRecordRepo>();
 
-            // Here's a demo of passing the controller the repository in the constructor
-            var controller = new ThingsController(mockRecRepo.Object);
+            //// set up the behavior that you want (you could have it return a value(s)
+            //mockRecRepo.Setup(x => x.GetRecords())
+            //    .Returns(Enumerable.Empty<Record>);
 
-            // put the View object in a var 
-            var result = controller.Index();
+            //// Here's a demo of passing the controller the repository in the constructor
+            //var controller = new ThingsController(mockRecRepo.Object);
+
+            //// put the View object in a var 
+            //var result = controller.Index();
 
             //  break at the next satement and check out what's in result. Then just let it run
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+
+            
+
+           
+
+            host.Run();
 
            
             
@@ -37,6 +46,11 @@ namespace MVCControllerDI
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+            .ConfigureLogging(logging =>
+                {
+                    logging.AddConsole();
+                    logging.AddEventLog();
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
